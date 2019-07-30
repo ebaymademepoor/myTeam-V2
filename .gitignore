@@ -1,0 +1,10 @@
+*.sqlite3
+*.pyc
+.~c9
+env.py
+.vscode/
+myTeam/Include
+myTeam/Lib
+myTeam/Scripts
+myTeam/__pycache__/
+myTeam/pyvenv.cfg
