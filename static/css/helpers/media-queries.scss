@@ -1,0 +1,43 @@
+/* --- Widths */
+
+$lgMobileMinWidth: 500px;
+$tabletMinWidth: 768px;
+$lgTabletMinWidth: 1024px;
+$laptopMinWidth: 1440px;
+$desktopMinWidth: 1920px;
+
+@mixin mobile {
+     @media (min-width: $mobileMinWidth){
+        @content
+    }
+}
+
+@mixin large-mobile {
+     @media (min-width: $lgMobileMinWidth){
+        @content
+    }
+}
+
+@mixin tablet {
+     @media (min-width: $tabletMinWidth){
+        @content
+    }
+}
+
+@mixin large-tablet {
+     @media (min-width: $lgTabletMinWidth){
+        @content
+    }
+}
+
+@mixin laptop {
+     @media (min-width: $laptopMinWidth){
+        @content
+    }
+}
+
+@mixin desktop {
+     @media (min-width: $desktopMinWidth){
+        @content
+    }
+}

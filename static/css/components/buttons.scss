@@ -1,0 +1,408 @@
+button,
+.link-btn {
+    width: 80px;
+    height: 30px;
+    border: $white 1px solid;
+    text-transform: uppercase;
+    color: $white;
+    font-family: 'Staatliches', cursive;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    
+    @include tablet {
+        width: 124px;    
+    }
+    
+    @include large-tablet {
+        width: 168px;    
+        font-size: 1.4em;
+    }
+}
+
+.link-btn {
+    text-align: center;
+    line-height: 32px;
+    display: block;
+    background-color: $brand-evening-black;
+}
+
+// Index.html buttons ----------------------------------------------------------
+.get-started-btn {
+    background-color: $brand-sunflower-yellow;
+    display: block;
+    line-height: 32px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 5px solid $brand-evening-black;
+    
+    @include tablet {
+        margin: 30px auto 22px;
+    }
+}
+
+// get_started.html buttons ----------------------------------------------------
+.open-sign-in-btn,
+.sign-in-btn {
+    background-color: $brand-starry-night-blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 20px;
+    
+    @include tablet {
+        font-size: 1.2em;    
+    }
+}
+
+.open-sign-up-btn,
+.sign-up-btn {
+    background-color: $brand-irises-green;
+    
+    @include tablet {
+        font-size: 1.2em;    
+    }
+}
+
+.sign-up-btn {
+    margin: 20px 0 0;
+}
+
+.close-parent-btn,
+.remove-parent-btn {
+    border: none;
+    width: 20px;
+    height: 20px;
+    color: $black;
+    position: absolute;
+    right: 3px;
+    top: 0;
+    background-color: unset;
+    margin: 2px;
+    cursor: pointer;
+    
+    @include tablet {
+        width: 30px;
+        height: 30px;
+        
+        i {
+            font-size: 1.4em;
+        }
+    }
+    
+    @include large-tablet {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.messages-box .close-parent-btn {
+    color: $white;
+}
+
+.update-form-btn,
+.new-group-btn,
+.join-group-btn,
+.update-player-attributes-btn,
+.create-edit-match-btn {
+    background-color: $brand-starry-night-blue;
+    display: block;
+}
+
+.group-rtn-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    padding: 5px 0;
+    margin: 0;
+    border: unset;
+}
+
+.update-player-attributes-btn {
+    margin: 0 auto;
+    background-color: $brand-irises-green;
+}
+
+// Group-home.html buttons -----------------------------------------------------
+.add-a-match-btn {
+    display: inline-block;
+    font-size: 8px;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    background-color: $brand-sunflower-yellow;
+    border-radius: 2px;
+    border: none;
+
+    @extend %inset-shadow;
+    
+    i {
+        font-size: 18px;
+        margin-top: 0.2px;
+    }
+    
+    @include tablet {
+        width: 36px;
+        height: 36px;
+        border-radius: 7px;
+        
+        i {
+            font-size: 32px;
+        }
+    }
+}
+
+// Match_page.html buttons -----------------------------------------------------
+.team-gen-link-btn,
+.edit-match-btn {
+    width: 86px;
+    height: 18px;
+    line-height: 16px;
+    font-size: 8px;
+    margin-bottom: 0;
+    display: inline-block;
+    background-color: $brand-evening-black;
+    padding: 0;
+    align-items: normal;
+    box-sizing: border-box;
+    
+    @include tablet {
+        font-size: 14px;        
+    }
+}
+
+.rate-performance-link-btn,
+.edit-match-btn {
+    height: 40px;
+    width: 100%;
+    background-color: $brand-evening-black-offset;
+    border: unset;
+    line-height: 40px;
+    font-size: 10px;
+    
+    @include tablet {
+        font-size: 14px;        
+    }
+}
+
+#email-availability-reminder-btn  {
+    margin: 0;
+    
+    @include tablet {
+        font-size: 14px;        
+    }
+}
+
+.rate-performance-link-btn {
+    background-color: $error-red;
+    margin-bottom: 0;
+}
+
+.create-edit-match-btn {
+    @include tablet {
+        margin-top: 20px;
+        font-size: 1em;
+    }
+}
+
+// Team Generation Buttons -----------------------------------------------------
+#pick-teams-btn,
+#view-saved-teams-btn {
+    background-color: $brand-evening-black-offset;
+    font-size: 12px;
+    position: relative;
+    width: 50%;
+    border: unset;
+    height: 100%;
+    margin: 0;
+}
+
+#regen-btn,
+#back-to-settings-btn,
+#save-teams-btn {
+    display: inline-block;
+    font-size: 8px;
+    width: 48px;
+    height: 14px;
+    background-color: $brand-evening-black;
+    
+    @include tablet {
+        font-size: 14px;
+        height: 20px;
+    }
+}
+
+#back-to-settings-btn {
+    @include tablet {
+        display: none;
+    }
+}
+
+#save-teams-btn {
+    background-color: $brand-sunflower-yellow;
+    color: $brand-evening-black;
+}
+
+// Animated switch buttons -----------------------------------------------------
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: $preference-green;
+}
+
+input:checked+.exclude {
+    background-color: $error-red;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+// General ---------------------------------------------------------------------
+.btn-row {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $white;
+    height: 40px;
+    margin-top: 40px;
+}
+
+// Profile.html buttons --------------------------------------------------------
+.add-new-image-btn {
+    height: 23px;
+    width: 78px;
+    background-color: $preference-green;
+    position: relative;
+    top: 1px;
+    
+    @include large-tablet {
+        font-size: 1em;
+        width: 100px;
+    }
+}
+
+#id_image {
+    color: $white;
+}
+
+// Rate_performance.html -------------------------------------------------------
+.performance-btn-row {
+
+    button {
+        border-radius: 50%;
+        height: 66px;
+        width: 66px;
+        margin: 10px;
+        
+        @include large-tablet {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    .good {
+        background-color: $preference-green;
+    }
+
+    .average {
+        background-color: $can-play-amber;
+    }
+
+    .poor {
+        background-color: $error-red;
+    }
+}
+
+.skip {
+    background-color: $brand-starry-night-blue;
+    
+    @include large-tablet {
+        margin-top: 40px;
+    }
+}
+
+.submit-perform-ratings {
+    background-color: $brand-evening-black;
+    font-size: 10px;
+}
+
+// Checkout.html ---------------------------------------------------------------
+
+#submit_payment_btn {
+    width: 100%;
+    background-color: $preference-green;
+}
+
+// Reset password buttons ------------------------------------------------------
+
+.password-reset-pages {
+    button {
+        background-color: $brand-evening-black;
+        font-size: 10px;
+    }
+    
+    .password-btn {
+        width: 172px;
+        height: 34px;
+    }
+}
+

@@ -1,0 +1,171 @@
+@import "helpers/cssreset";
+@import "helpers/placeholders";
+@import "helpers/colors";
+@import "helpers/media-queries";
+@import "components/buttons";
+@import "components/base";
+@import "components/pages";
+@import "components/page-backgrounds";
+@import "components/animations";
+
+// General styling -------------------------------------------------------------
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    
+    // Prevent blue highlight on click...
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    @include tablet {
+        font-size: 14px;
+    }
+    
+    @include large-tablet {
+        font-size: 16px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Staatliches', cursive;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 0.8em;
+}
+
+a,
+a:visited {
+    color: $white;
+    text-decoration: none;
+}
+
+.flex-center-content {
+    @extend %centralise-inner-container;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden,
+.start-hidden {
+    display: none;
+    position: absolute;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.errorlist {
+    color: $error-red;
+    margin: 10px 0;
+}
+
+.helptext {
+    display: none;
+}
+
+.make-pointer {
+    cursor: pointer;
+}
+
+.inset-shadow {
+    @extend %inset-shadow;
+}
+
+.row {
+    width: 100%;
+}
+
+.cancelled {
+    color: $error-red;
+    font-weight: 600 !important;
+}
+            
+.scheduled {
+    color: $preference-green;
+    font-weight: 600 !important;
+}
+
+.stick-to-top {
+    position: sticky;
+    top: 0;
+}
+
+hr {
+    border: 0;
+    margin: 15px;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input,
+label {
+    font-size: 1em;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+}
+
+label {
+    font-family: 'Staatliches', cursive;
+}
+
+.wrap-rows-on-tablet {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.tablet-row {
+    @include large-tablet {
+        display: flex;    
+    }
+}
+
+.height-adjusted {
+    @include tablet {
+        min-height: 65vh;
+    }
+    
+    .key-box {
+        width: 20%;
+        right: 27px;
+    }
+}
+
+strong {
+    font-weight: 900;
+}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block page_title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="page-container home-page">
+    <section class="opening-section">
+        <div class="opening-section-bg index-page-bg-settings">
+            <h1>Welcome to myTeam</h1>
+        </div>
+        <div class="container">
+            <p>
+                Designed for the players, myTeam is everything you need in your personal 
+                playing career.
+            </p> 
+            <p>
+                Manage your performances as rated by your peers, organise matches, generate 
+                fairer teams, your football career just got a whole lot better.
+            </p>
+        </div>
+    </section>
+    
+    
+    <section class="get-organised">
+        <div class="row">
+            <div class="get-organised-bg index-page-bg-settings">
+                <h2>Get Organised</h2>
+            </div>
+            <div class="container">
+                
+                <p>
+                    Getting organised is easy with myTeam.
+                </p>
+                <p>
+                    Create or join a group with your team mates and add the details of your 
+                    next match.  See who is available and who isn't, then use the team 
+                    generator to create	fairer teams, no messing about and no more arguing																	
+                    over uneven matches.
+                </p> 
+            </div>
+        </div>     
+    </section>
+    
+    
+        <section class="be-the-best">
+            <div class="row reverse">
+                <div class="be-the-best-bg index-page-bg-settings">
+                    <h2>Be the best you can be</h2>
+                </div>
+                <div class="container">
+                    
+                    <p>
+                        View your team mates and rate their playing attributes such as passing 
+                        and shooting out of 10, they will do the same for you.  Use this data to
+                        get a gauge for the areas of your game you need to improve and focus 
+                        accordingly.
+                    </p>
+                    <p>
+                        After each match, rate each players performance and	check your own form.
+                        Team generation will take into account both form and attributes helping 
+                        keep the teams well balanced.
+                    </p> 
+                </div>
+            </div>
+        </section>
+        <section class="video-section">
+            <h2>myTeam in Action...</h2>
+            <div class="video-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TlOt-MfNdME" 
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+            <a class="link-btn get-started-btn click-shrink hover-effect-gold" href="{% url 'get-started' %}">Get Started</a>
+        </section>
+</div>
+																	
+{% endblock %}

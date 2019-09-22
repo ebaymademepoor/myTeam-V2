@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block page_title %}Get Started{% endblock %} {% block content %}
+
+
+<div class="page-container">
+
+    <!--Sign in section-->
+
+    <section class="sign-in-section">
+        <h2>Already a member?</h2>
+        <p>Simply sign in my friend!</p>
+        <button id="open-sign-in-btn" class="open-sign-in-btn hover-effect-gold">Sign in</button>
+    </section>
+
+    <!--Sign up section-->
+
+    <section class="sign-up-section">
+        <button id="open-sign-up-btn" class="open-sign-up-btn hover-effect-gold">Sign Up</button>
+        <div class="container">
+            <h2>Is this your first time?</h2>
+            <p>Don't be shy, sign up and become a legend...</p>
+        </div>
+    </section>
+
+    <!--Form to log users in that appears on click of sign-in-btn-->
+    <!--If errors the form will show on page after submission-->
+
+    {% if login_error == "yes" %}
+    <div class="container login-form">
+        {% else %}
+        <div class="container start-hidden login-form">
+            {% endif %}
+            <button class="close-parent-btn"><i class="far fa-window-close"></i></button>
+            <h3 class="uppercase">Welcome back</h3>
+            <p>Please enter your details below</p>
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %} {{ login_form.as_p }}
+                <button class="sign-in-btn click-shrink hover-effect-gold" type="submit">Login</button>
+            </form>
+            <!--Reset password link-->
+            <p>Forgot Password</p>
+        </div>
+
+        <!--Form to register new users on click of sign-up-btn -->
+        <!--If errors the form will show on page after submission-->
+
+        {% if reg_error == "yes" %}
+        <div class="container sign-up-form">
+            {% else %}
+            <div class="container start-hidden sign-up-form">
+                {% endif %}
+                <button class="close-parent-btn"><i class="far fa-window-close"></i></button>
+                <h3 class="uppercase">Sign up</h3>
+                <p>Let's get started, sign up below!</p>
+                </p>
+                <form method="POST" action="{% url 'register' %}">
+                    {% csrf_token %} {{ registration_form.as_p }} {{ form.non_field_errors }}
+                    <button class="sign-up-btn click-shrink hover-effect-gold" type="submit">Register</button>
+                </form>
+            </div>
+
+        </div>
+
+        {% endblock %}

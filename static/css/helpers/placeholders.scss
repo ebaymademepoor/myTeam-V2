@@ -1,0 +1,71 @@
+%centralise-inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%cover-image-align-bottom {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%cover-image-align-middle {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%inset-shadow {
+    -webkit-box-shadow: inset -7px -7px 13px -6px rgba(0,0,0,0.43);
+    -moz-box-shadow: inset -7px -7px 13px -6px rgba(0,0,0,0.43);
+    box-shadow: inset -7px -7px 13px -6px rgba(0,0,0,0.43);
+}
+
+%inset-shadow-white {
+    -webkit-box-shadow: inset -7px -7px 13px -6px rgba(255,255,255,0.43);
+    -moz-box-shadow: inset -7px -7px 13px -6px rgba(255,255,255,0.43);
+    box-shadow: inset -7px -7px 13px -6px rgba(255,255,255,0.43);
+}
+
+%matches-box-shadow {
+    -webkit-box-shadow: inset -5px -5px 38px -12px rgba(0,0,0,0.63);
+    -moz-box-shadow: inset -5px -5px 38px -12px rgba(0,0,0,0.63);
+    box-shadow: inset -5px -5px 38px -12px rgba(0,0,0,0.63);
+}
+
+%floating-shadow {
+    -webkit-box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.42);
+    box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.42);
+}
+
+%contain-picture {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+%user-image-photo {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+%flip-img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+%unflip-text {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}

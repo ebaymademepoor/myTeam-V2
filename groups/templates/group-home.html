@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block page_title %}{{ group_data.group_name }}{% endblock %}
+
+{% block content %}
+
+<div class="page-container group-home">
+    
+    <!--Heade section contains details of the group-->
+    
+    <section class="header">
+        <div class="container group-box">
+            <div class="container group-details-container">
+                <h2>{{ group_data.group_name }}</h2>
+                <p>Creator - {{ group_data.creator }}</p>
+                <p>Next match -
+                {% if "2" in group_data.next_match.all|lower %}
+                    {% for entry in group_data.next_match %} 
+                        <span>{{ entry.date_of_match }}</span>
+                    {% endfor %}
+                {% else %}
+                    <span>TBC</span>
+                {% endif %}
+                </p>
+            </div>
+            <div class="container members-details-container">
+                <div class="flex">
+                    <div class="container">
+                        <p>Members</p>
+                        <p>{{ group_data.users.all|length }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container group-id uppercase">
+            <button id="group-pwd" class="hidden">{{ group_data.password }}</button> 
+            <p>Group ID = {{ group_data.pk }}</p> 
+            <button id="show-password" class="click-shrink hover-effect-brand-green">Show Password</button> 
+        </div>
+    </section>
+    
+    <section class="content">
+        <div class="matches-box">
+            <div class="row">
+                <h3>Recent / Upcoming Matches</h3>
+                <a href="{% url 'matches' group_data.pk 0 %}" class="link-btn add-a-match-btn click-shrink hover-effect-gold"><i class="fas fa-plus-square"></i></a> 
+            </div> 
+            
+            <!--If matches have already been created they will show here-->
+            
+            {% if matches %}
+                <div class="row matches-row">
+                {% for match in matches %}
+                
+                    <a class="match-link click-color-change" href="{% url 'matches' group_data.pk match.pk %}">
+                        <div class="match-box grow-match">
+                            <div class="container">
+                                <p>Match ID: <span>{{ match.id }}</span></p> 
+                                <p>Status:
+                                    {% if match.match_status == "S" and match.match_completed %}
+                                        <span class="scheduled">COMPLETED</span>
+                                    {% elif match.match_status == "S" %} 
+                                        <span class="scheduled">ON</span>
+                                    {% else %}
+                                        <span class="cancelled">CANCELLED</span>
+                                    {% endif %}
+                                </p> 
+                                <p>Date: <span>{{ match.date_of_match|date:'d-m-Y' }}</span></p> 
+                                <p>Kick off: <span>{{ match.time_of_match|time:"H:i" }}</span></p> 
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+                </div>
+            {% else %}
+                <p class="no-matches">There are currently no matches scheduled</p> 
+            {% endif %}
+        </div>
+        
+        <div class="member-box">
+            <div class="stick-to-top">
+                <div class="header-container">
+                    <h2>Group members</h2>
+                    
+                    <!--The logged in users link will show next to the header-->
+                    
+                    <div class="container member-container">
+                        <div class="user-container">
+                            <a class="shirt click-shrink grow" href="{% url 'player-profile' this_user.pk group_data.pk %}">
+                                <span class="container">
+                                    {% if this_user.nickname %}
+                                        <p id="curve-{{ user.pk }}" class="member-content username">{{ this_user.nickname|truncatechars:9 }}</p>
+                                    {% else %}
+                                        <p id="curve-{{ user.pk }}" class="member-content username">{{ this_user.username|truncatechars:9 }}</p>
+                                    {% endif %}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="key-box">
+                    <p class="key-text">All ratings as scored by you...</p> 
+                    <div class="gk-key key"></div><label>GK Score</label>
+                    <div class="outfield-key key"></div><label>Outfield Score</label>
+                    <div class="last-rated-key key"></div><label>Date last rated</label>
+                </div>
+            </div>
+            
+            <!--Any other members will show in this section-->
+            
+            <div class="wrap-rows-on-tablet">
+                {% for user in group_data.users.all %}
+                    {% if this_user != user %}
+                        <div class="container member-container row">
+                            <div class="user-container">
+                                <a class="shirt click-shrink grow" href="{% url 'player-profile' user.pk group_data.pk %}">
+                                    <span class="container">
+                                        {% if user.nickname %}
+                                            <p id="curve-{{ user.pk }}" class="member-content username">{{ user.nickname|truncatechars:9 }}</p>
+                                        {% else %}
+                                            <p id="curve-{{ user.pk }}" class="member-content username">{{ user.username|truncatechars:9 }}</p>
+                                        {% endif %}
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        <!--If players have been rated those details will be shown here-->
+                        
+                        {% if user|lower in players_i_have_rated.all|lower %}
+                            {% for rating in players_i_have_rated.all %}
+                                {% if rating.player_rated|lower == user.email|lower %}
+                                <div class="data-container">
+                                    <div class="gk-key key"></div><p class="rating">{{ rating.gk_score }}</p>    
+                                    <div class="outfield-key key"></div><p class="rating">{{ rating.outfield_score }}</p>    
+                                    <div class="last-rated-key key"></div><p class="rating-date">{{ rating.last_updated|date:'d-m-Y'  }}</p>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <div class="data-container-no-data">
+                                <i class="fas fa-arrow-circle-left"></i>
+                                <p class="not-rated">You have not rated this player.  Click their shirt to rate them...</p>     
+                            </div> 
+                        {% endif %}
+                        </div>
+                        
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock %}

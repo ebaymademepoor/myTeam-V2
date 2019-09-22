@@ -1,0 +1,96 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myTeam - {% block page_title %}{% endblock %}</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches|Great+Vibes" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-free-5.7.2-web/css/all.min.css' %}" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=2.20" type="text/css" />
+    
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/circletype/dist/circletype.min.js' %}"></script>
+    <script src="{% static 'js/chart.js/dist/Chart.min.js' %}"></script>
+    {% block head_js %}
+    {% endblock head_js %}
+    
+</head>
+<body>
+    
+    <!--Nav bar for the site-->
+    
+    <nav>
+        <div class="nav-content-container">
+            <div class="logo click-shrink">
+                <a href="/" class="logo-pic grow"></a>
+            </div>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li class="click-shrink grow"><a href="{% url 'group-select' %}"><i class="fas fa-users nav-i"></i></i>Groups</a></li>
+                    <li class="click-shrink grow"><a href="{% url 'profile' user.pk %}"><i class="fas fa-user nav-i"></i>Profile</a></li>
+                    <li class="click-shrink grow"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt nav-i"></i>Logout</a></li>
+                {% else %}
+                    <li class="click-shrink grow"><a href="{% url 'get-started' %}"><i class="fas fa-play nav-i"></i>Get Started</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+    <!--This loading screen covers the page while the page loads-->
+    
+    <div class="loading-screen">
+        <div class="container">
+            <div class="logo click-shrink">
+                <a href="/" class="logo-pic"></a>
+            </div>
+            <div class="container bounce-ball">
+                <i class="fas fa-futbol rotate-ball"></i>        
+            </div>
+            <p>Loading...</p>
+        </div> 
+        
+    </div> 
+    
+    <!--Messages box will appear as and when messages are required-->
+
+    <div class="messages-box start-off-screen">
+        <button class="close-parent-btn"><i class="far fa-window-close"></i></button> 
+        <div class="container">
+            <p class="message-para">{% for message in messages %}{{ message }}{% endfor %}</p>
+        </div>
+    </div>
+    
+    <h1>{% block page_heading %}{% endblock %}</h1> 
+    
+    <!--Everything between the nav and footer will be held within the site container-->
+    
+    <div class="site-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <!--Footer for the site-->
+    
+    <footer class="flex-center-content">
+        <div class="footer-content-container">
+            <div class="container hover-effect-gold">
+                <a href="{% url 'about-us' %}">About Us</a> 
+            </div> 
+            <div class="container hover-effect-gold">
+                <a href="{% url 'contact-us' %}">Get in Touch</a> 
+            </div> 
+            {% if user.is_authenticated %}
+                <div class="container hover-effect-gold">
+                    <a href="{% url 'checkout' "D" %}">Donate</a> 
+                </div>
+            {% endif %}
+        </div>    
+    </footer>
+    
+    <script type="text/javascript" src="{% static 'js/scripts/main.js' %}?v=2.20"></script>
+</body>
+</html>

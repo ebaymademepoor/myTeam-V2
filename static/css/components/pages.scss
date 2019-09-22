@@ -1,0 +1,2317 @@
+// Index page styles -----------------------------------------------------------
+.opening-section,
+.get-organised,
+.be-the-best {
+    min-height: 386px;
+
+    p {
+        padding: 28px 28px 0;
+        line-height: 19px;
+        
+        @include tablet {
+            padding: 28px 60px 0;
+        }
+        
+        @include large-tablet {
+            padding: 40px 144px 0;
+        }
+        
+        @include laptop {
+            padding: 40px 60px 0;
+        }
+    }
+
+    p:nth-of-type(2) {
+        padding-bottom: 28px;
+    }
+}
+
+.opening-section {
+    background-color: $brand-irises-green;
+    color: $white;
+}
+
+.get-organised {
+    background-color: $brand-starry-night-blue;
+    color: $white;
+}
+
+.be-the-best {
+    color: $brand-irises-green;
+    background-color: $white;
+    
+    .container {
+        padding-bottom: 30px;
+    }
+}
+
+.opening-section,
+.be-the-best,
+.get-organised {
+    @include large-tablet {
+        .container {
+            padding: 40px 0;
+        }
+    }
+    
+    @include laptop {
+        .container {
+            padding: 40px 90px;
+        }
+    }
+}
+
+.get-organised,
+.be-the-best {
+    @include laptop {
+        
+        .row {
+            display: flex;
+        }
+        
+        .reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .container {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 20px;
+            
+            p {
+                padding: 20px 20px;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.video-section {
+    background-color: $brand-irises-green;
+    color: $white;
+    padding: 20px 0;
+    
+    h2 {
+        text-align: center;
+        padding: 20px 0;
+    } 
+    
+    .video-container {
+        height: 280px;
+        width: 210px;
+        margin: 0 auto;
+        
+        @include tablet {
+            height: 340px;
+            width: 255px;
+        }
+        
+        @include laptop {
+            height: 500px;
+            width: 375px;
+        }
+    }
+    
+    a {
+        margin-top: 20px;
+    }
+}
+
+// get_started.html ------------------------------------------------------------
+.sign-in-section,
+.sign-up-section {
+    position: relative;
+    height: 46vh;
+    box-sizing: border-box;
+    text-align: center;
+    color: $white;
+
+    p {
+        padding: 22px 10px 0;
+        line-height: 14px;
+    }
+}
+
+.sign-in-section {
+    background-color: $brand-irises-green;
+    padding: 30px 20px 20px;
+    
+    @include tablet {
+        padding-top: 80px;    
+    }
+}
+
+.sign-up-section {
+    background-color: $brand-starry-night-blue;
+    padding: 20px 20px 30px;
+
+    .container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 20px;
+        
+        @include tablet {
+            bottom: 80px;    
+        }
+    }
+}
+
+.login-form,
+.sign-up-form {
+    background-color: $white;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    min-height: 66%;
+    max-width: 400px;
+    
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    h3~p {
+        margin-bottom: 24px;
+    }
+
+    label,
+    input {
+        display: inline-block;
+        width: 90%;
+        margin: 0 auto 8px;
+        text-align: left;
+        
+        @include laptop {
+            margin: 0 auto 24px;
+        }
+    }
+}
+
+.login-form {
+    h3~p {
+        margin-bottom: 60px;
+    }
+
+    p a {
+        color: $error-red;
+    }
+}
+
+// profile.html ----------------------------------------------------------------
+
+.chartjs-render-monitor {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#update-form {
+    position: absolute;
+    height: 238px;
+    z-index: 5;
+    top: 250px;
+    padding: 30px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    
+    @include tablet {
+        top: 94px;
+        height: 206px;
+    }
+    
+    @include large-tablet {
+        top: 102px;
+        height: 310px;
+    }
+    
+    label,
+    input {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.profile-page {
+
+    .first_name,
+    .surname,
+    .nickname,
+    .date_of_birth,
+    .attack,
+    .midfield,
+    .defense,
+    .goalkeeper {
+        cursor: pointer;
+    }
+
+
+    section {
+        padding: 32px;
+    }
+
+    h4 {
+        margin-bottom: 35px;
+    }
+
+    dt,
+    dd {
+        display: inline-block;
+        margin: 3px 0;
+        padding: 6px 0;
+        font-size: 9px;
+        
+        @include large-tablet {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.image-form {
+
+    p {
+        display: inline-block;
+
+        input {
+            max-width: 83px;
+            font-family: 'Staatliches', cursive;
+            vertical-align: inherit;
+            
+            @include tablet {
+                max-width: 100px;
+                font-size: 1em;
+            }
+        }
+
+    }
+
+    i {
+        font-size: 10px;
+        text-align: center;
+        color: $white;
+        font-weight: 600;
+        margin-left: 4px;
+        
+        @include large-tablet {
+            font-size: 1em;
+        }
+    }
+}
+
+.user-info-section {
+    color: $brand-irises-green;
+    background-color: $white;
+    position: relative;
+    
+    .header {
+
+        h4 {
+            margin-bottom: 0;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        max-width: 200px;
+        font-size: 2.2em;
+        
+        @include tablet {
+            max-width: unset;
+        }
+    }
+
+    h1~p {
+        display: inline-block;
+        font-size: 6px;
+    }
+    
+    .photo-container,
+    .data-holder {
+        @include large-tablet {
+            width: 44%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .user-photo-img {
+        @extend %user-image-photo;
+        margin: 20px auto 0;
+        height: 148px;
+        width: 117px;
+        
+        @include large-tablet {
+            height: 274px;
+            width: 200px;
+        }
+    }
+
+    .data-container {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: 20px;
+        
+        dt {
+            width: 40%;
+            background-color: $brand-irises-green;
+            color: $white;
+        }
+
+        dd {
+            width: 60%;
+            background-color: $form-input-grey;
+            color: $brand-starry-night-blue;
+        }
+
+    }
+
+    .data-container:nth-of-type(2) {
+        margin-top: 0;
+    }
+
+
+    .shirt {
+        margin: 20px 0;
+        height: 110px;
+        color: $white;
+
+        span {
+
+            .username {
+                margin-top: 5px;
+            }
+
+            div {
+                font-size: 16px;
+            }
+
+        }
+    }
+
+    .first_name,
+    .surname,
+    .nickname,
+    .date_of_birth {
+        @extend %inset-shadow;
+    }
+
+    .license-expiry>dt,
+    .license-expiry>dd {
+        background-color: $brand-starry-night-blue !important;
+        color: $white !important;
+    }
+}
+
+.user-playing-positions-section {
+    position: relative;
+    padding: 32px;
+    background-color: $brand-irises-green;
+    color: $white;
+
+    .preferred-box {
+        background-color: $preference-green !important;
+    }
+
+    .can-play-box {
+        background-color: $can-play-amber !important;
+    }
+
+    .cant-play-box {
+        background-color: red !important;
+    }
+
+    .key-box {
+        position: absolute;
+        right: 32px;
+        width: 18%;
+        top: 32px;
+        
+        @include large-tablet {
+            right: 10px;    
+        }
+        
+        .preferred-box,
+        .can-play-box,
+        .cant-play-box {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+        }
+
+        label {
+            font-size: 8px;
+            
+            @include large-tablet {
+                font-size: .8em;
+            }
+        }
+    }
+    
+    .half-pitch {
+        border: 1px solid $white;
+        position: relative;
+        
+        @include large-tablet {
+            top: 50px;        
+        }
+        
+        .row {
+            height: 55px;
+            @extend %centralise-inner-container;
+            
+            @include large-tablet {
+                height: 86px;
+            }
+
+            div {
+                display: block;
+                position: relative;
+                text-align: center;
+                white-space: nowrap;
+                height: 20px;
+                width: 28px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                background-color: #fd3636;
+                padding-top: 7px;
+                
+                @include large-tablet {
+                    line-height: 14px;
+                }
+
+                span {
+                    text-align: center;
+                    margin-left: -100%;
+                    margin-right: -100%;
+                    font-weight: 600;
+                    color: $white;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+.user-attributes-section {
+    background-color: $white;
+    
+    @include large-tablet {
+        border-top: solid $form-input-grey 1px;
+    }
+    
+    h4 {
+        color: $brand-starry-night-blue;
+    }
+
+    .container {
+        margin-bottom: 22px;
+    }
+
+    .chart-container,
+    .btn-container,
+    .attr-container {
+        margin-bottom: 0px;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    dt,
+    label {
+        width: 36%;
+        background-color: $brand-starry-night-blue;
+        color: $white;
+    }
+
+    dd,
+    input {
+        width: 13%;
+        background-color: $form-input-grey;
+        color: $black;
+        min-height: 10px;
+    }
+
+    #rate-player-form {
+        
+        label,
+        input {
+            font-family:'Montserrat', sans-serif;
+        }
+        
+        p {
+            display: inline-block;
+            font-size: 8px;
+            width: 9%;
+            font-weight: 600;
+        }
+    }
+}
+
+.user-form-section {
+    background-color: $brand-starry-night-blue;
+
+    .container:first-of-type {
+        color: white;
+
+        p:first-of-type {
+            background-color: $white;
+            color: $brand-irises-green;
+            margin: 20px auto 30px;
+            font-size: 20px;
+            padding: 18px 9px;
+            width: 40px;
+            font-weight: 900;
+            text-align: center;
+        }
+    }
+    
+    .expiry-container {
+        color: $white;
+        
+        p, 
+        a {
+            margin-top: 20px;
+        }
+    }
+
+    h4 {
+        color: $white;
+    }
+
+    dt {
+        width: 50%;
+        background-color: $brand-starry-night-blue;
+        color: $white;
+        text-align: left;
+    }
+
+    dd {
+        width: 50%;
+        background-color: $form-input-grey;
+        color: $brand-irises-green;
+        text-align: center;
+    }
+
+    dd:last-of-type,
+    dt:last-of-type {
+        font-weight: 600;
+        margin-top: 22px;
+        width: 100%;
+    }
+}
+
+.user-playing-positions-section,
+.user-attributes-section {
+    @include large-tablet {
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+// group_select.html -----------------------------------------------------------
+.group-page {
+    background-color: $brand-irises-green;
+
+    h1 {
+        color: $white;
+        margin-bottom: 10px;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }        
+    }
+
+    section {
+        padding: 32px;
+        
+        @include tablet {
+            padding: 52px;
+        }
+        
+        @include large-tablet {
+            padding: 85px;
+        }
+        
+    }
+
+    .create-join-group-area {
+
+        padding-bottom: 16px;
+
+        .container {
+            text-align: unset;
+            color: #fff;
+            
+            @include large-tablet {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+
+        .create-group-box,
+        .join-group-box {
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            margin: 5px 0;
+            box-sizing: border-box;
+            
+            @include large-tablet {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            p,
+            i {
+                display: inline-block;
+            }
+            
+            p {
+                border: 1px #fff solid;
+                padding: 6px 0 6px 6px;
+                min-width: 86%;            
+            }
+            
+            i {
+                margin: 0;
+                padding: 0;
+                font-size: 32px;
+                position: relative;
+                top: 7px;
+                margin-left: -6px;
+                
+                @include large-tablet {
+                    font-size: 36px;
+                }  
+            }
+        }
+    }
+
+    .group-select-area {
+        color: $white;
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: $brand-irises-green;
+        
+        @include large-tablet {
+            padding-top: 70px;
+        }
+        
+        a {
+            width: 100%;
+            display: inline-block;
+            
+            @include tablet {
+                width: 50%;
+            }
+        }
+        
+        .container {
+            text-align:left;
+        }
+        
+        .flex .container {
+            text-align:center;
+        }
+    }
+
+    .create-group-form,
+    .join-group-form {
+        position: absolute;
+        min-height: 232px;
+        z-index: 5;
+        top: 78px;
+        padding: 30px;
+        background-color: white;
+        width: 100%;
+        box-sizing: border-box;
+
+        .close-parent-btn {
+            top: 10px;
+        }
+
+        label,
+        input {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        @include tablet {
+            top: 0;
+            min-height: 400px;
+            padding: 62px;
+            
+            label,
+            input {
+                margin-bottom: 16px;
+            }   
+        }
+    }
+}
+
+.group-box {
+    background-color: $brand-sunflower-yellow;
+    border-radius: 6px;
+    margin: 0 auto 16px;
+    padding: 16px;
+    font-family: 'Staatliches', cursive;
+    max-width: 320px;
+    min-height: 114px;
+    box-sizing: border-box;
+    color: $brand-irises-green;
+    
+    @include tablet {
+        margin: 0 auto 28px;
+        min-height: 122px;
+    }
+    
+    @include large-tablet {
+        max-width: 400px;
+        min-height: 140px;
+    }
+    
+    .group-details-container {
+        display: inline-block;
+        text-align: left;
+        margin-right: 10px;
+        min-width: 60%;
+        max-width: 146px;
+        height: 100%;
+        
+        h2 {
+            margin-bottom: 5px;
+            min-height: 33px;
+        }
+
+        p {
+            color: $white;
+            font-size: 14px;
+            
+            @include large-tablet {
+                font-size: 1.1em;
+            }
+        }
+        
+        .container {
+            position: relative;
+            bottom: 0;
+            text-align: left;
+        }
+    }
+
+    .members-details-container {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid $white;
+        float: right;
+        color: $white;
+        
+        p:last-of-type {
+            font-size: 2em;
+        }
+
+        .flex {
+            @extend %centralise-inner-container;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// group-home.html -------------------------------------------------------------
+.group-home {
+
+    header,
+    .group-box {
+        width: 100%;
+        max-width: unset;
+        background-color: $brand-evening-black;
+        color: $white;
+        padding: 28px 28px 16px;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        border-radius: 0;
+        
+        @include tablet {
+            text-align: left;
+        }
+        
+        
+        h2 {
+            color: $white;
+        }
+    }
+
+    .group-id {
+        background-color: $brand-evening-black-offset;
+        padding: 6px;
+        font-size: 8px;
+        color: $white;
+        position: relative;
+        
+        @include tablet {
+            font-size: 0.8em;
+            padding: 10px;
+        }
+        
+        button {
+            position: absolute;
+            text-transform: initial;
+            top: 0;
+            left: 0;
+            border: unset;
+            margin: 0;
+            font-size: 1em;
+            width: auto;
+            min-width: 110px;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: initial;
+            background-color: $brand-irises-green;
+        }
+        
+        button:nth-of-type(2) {
+            left: unset;
+            right: 0;
+            background-color: $brand-sunflower-yellow;
+        }
+    }
+
+    .content {
+        box-sizing: border-box;
+
+        .member-box,
+        .matches-box {
+            box-sizing: border-box;
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+
+        .member-box {
+            color: $white;
+            width: 100%;
+            background-color: $brand-irises-green;
+            padding: 10px 20px;
+            min-height: 55vh;
+            
+            @include tablet {
+                padding: 30px 54px;
+                min-height: 66vh;
+            }
+            
+            .header-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .member-container {
+                    position: relative;
+                    top: 5px;
+                }
+            }
+
+            .stick-to-top {
+                z-index: 5;
+                background-color: $brand-irises-green;
+                padding-bottom: 20px;
+            }
+
+            .key {
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+            }
+
+            label {
+                font-size: 8px;
+                vertical-align: middle;
+                margin: 0 5px;
+                
+                @include tablet {
+                    font-size: .8em;
+                }
+            }
+
+            .key-text {
+                font-size: 8px;
+                width: 100%;
+                margin-bottom: 8px;
+                
+                @include tablet {
+                    font-size: .8em;
+                }
+            }
+
+            .gk-key {
+                background-color: $brand-sunflower-yellow;
+            }
+
+            .outfield-key {
+                background-color: $brand-starry-night-blue;
+            }
+
+            .last-rated-key {
+                background-color: $brand-evening-black;
+            }
+
+            .row {
+                box-sizing: border-box;
+                padding: 0px;
+                
+                @include tablet {
+                    width: 50%;
+                }
+            }
+
+            .member-container {
+                text-align: center;
+                display: flex;
+                align-items: center;
+
+                .user-container {
+                    display: inline-block;
+                    width: 24%;
+                    min-width: 68px;
+                    
+                    @include tablet {
+                        min-width: 82px;
+                    }
+                    
+                    @include large-tablet {
+                        min-width: 90px;
+                    }
+                }
+
+                .rating:nth-of-type(4) {
+                    width: unset;
+                }
+
+                .rating {
+                    font-size: 10px;
+                    width: 20px;
+                    padding: 5px;
+                    margin: 0 10px 0 0;
+                    
+                    @include large-tablet {
+                        font-size: 16px;
+                    }
+                }
+
+                .rating-date {
+                    font-size: 10px;
+                    padding: 5px;
+                    
+                    @include large-tablet {
+                        font-size: 16px;
+                    }
+                }
+
+                .shirt {
+                    display: inline-block;
+                    height: 46px;
+                    width: 100%;
+                    margin: 8px 0;
+                    background-image: url('../img/transparent-shirt.png');
+                    @extend %contain-picture;
+                    
+                    @include tablet {
+                        height: 56px;
+                        margin: 12px 0;
+                    }
+                    
+                    @include tablet {
+                        height: 72px;
+                        margin: 16px 0;
+                    }
+                    
+                    .container {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        .username {
+                            font-family: 'Staatliches', cursive;
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+
+                .not-rated {
+                    font-size: 0.8em;
+                }
+
+                .data-container {
+                    margin-left: 30px;
+                    vertical-align: middle;
+
+                    p {
+                        width: unset;
+                        min-width: 28px;
+                    }
+                }
+
+                .data-container-no-data {
+                    margin-left: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    p {
+                        width: 62%;
+                        text-align: left;
+                    }
+
+                    i {
+                        font-size: 14px;
+                        margin-right: 14px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            p,
+            h3 {
+                width: 45%;
+                display: inline-block;
+                margin: 2px 0;
+                box-sizing: border-box;
+            }
+
+            .member-content {
+                font-size: 0.8em;
+                padding: 0 0 6px 0;
+            }
+        }
+
+        .matches-box {
+            width: 100%;
+            color: $brand-sunflower-yellow;
+            background-color: $brand-evening-black;
+            text-align: left;
+            position: relative;
+
+            .container p {
+                margin: 2px auto;
+            }
+
+            h3 {
+                padding: 6px 0;
+                text-align: left;
+                display: inline-block;
+                width: 91%;
+            }
+
+            .row:first-of-type {
+                padding: 2px 20px;
+                box-sizing: border-box;
+                justify-content: center;
+            }
+
+            .no-matches {
+                padding: 20px;
+            }
+
+            .matches-row {
+                background-color: $brand-evening-black;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .match-link:nth-of-type(even) {
+                background-color: $brand-evening-black-offset;
+                width: 30%;
+                @extend %matches-box-shadow;
+                
+                @include tablet {
+                    width: 22%;
+                }
+                
+                @include laptop {
+                    width: 11%;
+                }
+            }
+
+            .match-link {
+                position: relative;
+                left: 4.5%;
+                text-align: center;
+                background-color: $brand-evening-black;
+                display: inline-block;
+                padding: 4px;
+                font-size: 8px;
+                width: 31%;
+                height: 56px;
+
+                -webkit-transform-origin: 100% 0;
+                -ms-transform-origin: 100% 0;
+                transform-origin: 100% 0;
+                -webkit-transform: skew(-24deg);
+                -ms-transform: skew(-24deg);
+                transform: skew(-24deg);
+                
+                @include tablet {
+                    height: 90px;
+                    font-size: 1em;
+                    width: 23%;
+                }
+                
+                @include laptop {
+                    height: 74px;
+                    font-size: .9em;
+                    width: 11%;
+                    left: 3.5%;
+                }
+                
+                .match-box {
+
+                    width: 100%;
+                    height: 100%;
+                    @extend %centralise-inner-container;
+                    
+                    .container {
+                        width: 90%;
+                    }
+                    
+                    p {
+                        -webkit-transform: skew(24deg);
+                        -ms-transform: skew(24deg);
+                        transform: skew(24deg);
+                        text-align: left;
+                        width: 66px;
+                        font-family: 'Staatliches', cursive;
+                        letter-spacing: 0.2px;
+                        
+                        @include tablet {
+                            width: 120px;
+                            font-size: 1em;
+                        }
+                        
+                        @include laptop {
+                            width: 96px;
+                            font-size: .9em;
+                        }
+                    }
+
+                    span {
+                        float: right;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// player-profile.html ---------------------------------------------------------
+.user-attributes-section {
+    label,
+    input {
+        display: inline-block;
+        margin: 3px 0;
+        padding: 6px 0;
+        font-size: 9px;
+    }
+
+    input {
+        width: 9%;
+        text-align: center;
+    }
+}
+
+// match_page.html -------------------------------------------------------------
+.matches-page {
+
+    .header {
+        padding: 28px 28px 0;
+        color: $white;
+        
+        @include tablet {
+            padding: 56px 56px 0;
+        }
+    }
+    
+    .header:first-of-type,
+    .match-data {
+        background-color: $brand-irises-green;
+    }
+
+    .match-data {
+        color: $white;
+        
+        .overview-container {
+            text-align: left;
+            font-size: 10px;
+            padding-top: 18px;
+
+            span {
+                margin-left: 6px;
+                font-weight: 500;
+            }
+
+            p {
+                display: inline-block;
+                margin: 2px 8px 2px 0;
+                font-weight: 600;
+                
+                @include tablet {
+                    font-size: 1.2em;
+                }
+            }
+            
+            .ratings-message {
+                padding: 10px 28px;
+            }
+            
+            .row {
+                padding: 2px 28px;
+                box-sizing: border-box;
+                
+                @include tablet {
+                    padding: 6px 56px;
+                }
+            }
+        }
+
+
+        form {
+            font-family: 'Staatliches', cursive;
+            max-width: 300px;
+            position: relative;
+            font-size: 1.2em;
+            padding: 28px;
+            margin: 0 auto;
+            
+            @include tablet {
+                font-size: 1.2em;
+                padding: 28px 56px;
+                max-width: 60%;
+                margin: 50px auto 0;
+                
+                label {
+                    margin-right: 16px;
+                    font-size: 20px;
+                }
+            }
+            
+            p:nth-of-type(odd) {
+                background-color: $alt-grass-green;
+            }
+            
+            .alt-grass {
+                background-color: $alt-grass-green;
+            }
+            
+            .close-parent-btn {
+                text-align: right;
+                color: $white;
+                top: 10px;
+                right: 10px;
+            }
+            
+            span {
+                font-family: 'Staatliches', cursive;
+                vertical-align: middle;
+                margin-left: 6px;
+                @include tablet {
+                    font-size: 20px;    
+                }
+            }
+            
+            textarea {
+                width: 100%;
+                height: 60px;
+                box-sizing: border-box;
+                margin-top: 10px;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10px;
+            }
+            
+            label {
+                vertical-align: middle;
+            }
+            
+            input,
+            select,
+            textarea {
+                font-size: 10px;
+                vertical-align: middle;
+                
+                @include tablet {
+                    font-size: 15px;    
+                }
+            }
+
+            select {
+                float: right;
+                font-family: 'Montserrat', sans-serif;
+                color: $brand-evening-black;
+                background-color: $brand-sunflower-yellow;
+                font-weight: 600;
+            }
+
+            .row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .row,
+            p {
+                padding: 12px 8px;
+                box-sizing: border-box;
+            }
+            
+            .row input {
+                position: relative;
+                right: 8px;
+            }
+            
+            .repeat-row {
+                 justify-content: unset;
+                 background-color: transparent !important;
+                 
+                 input {
+                     right: unset;
+                 }
+            }
+            
+            option:first-of-type {
+                background-color: $preference-green;
+            }
+
+            option {
+                background-color: $error-red;
+            }
+        }
+    }
+
+    .player-availability {
+        background-color: $white;
+        color: $brand-irises-green;
+        min-height: 60vh;
+        position: relative;
+        
+        .member-container:nth-of-type(odd){
+            background-color: $row-seperator-grey;
+        }
+        
+        .member-container .row {
+            width: 90%;
+        }
+        
+        .header {
+            padding: 28px 28px 0;
+            color: $brand-irises-green;
+            background-color: $white;
+            
+            @include tablet {
+                padding: 28px 56px 0;
+            }
+        }
+        
+        .ratings-header {
+            width: 88px;
+            text-align: center;
+            position: absolute;
+            right: 8%;
+            top: 27px;
+            font-size: 8px;
+            
+            @include tablet {
+                right: 14%;
+                font-size: 0.8em;
+            }
+            
+            @include large-tablet {
+                right: 16%;
+            }
+        }
+        
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        i {
+            font-size: 22px;
+        }
+
+        .fa-check-circle {
+            color: $preference-green;
+        }
+
+        .fa-times-circle {
+            color: $error-red;
+        }
+
+        .fa-question-circle {
+            color: $brand-evening-black;
+        }
+        
+        .fa-thumbs-down {
+            color: $error-red;
+        }
+    }
+
+    .member-container {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 38px;
+        
+        @include tablet {
+            height: 48px;
+        }
+
+        .member-content {
+            color: $brand-evening-black;
+            font-family: 'Great Vibes', cursive;
+            font-weight: 900;
+            font-size: 16px;
+            padding-top: 1px;
+            
+            @include tablet {
+                font-size: 1.4em;
+            }
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            .column {
+                width: 30%;
+            }
+            
+        }
+
+        .availability-container {
+
+            width: 86%;
+            margin: 0 auto;
+            
+            p {
+                font-size: 10px;
+            }
+            
+            .i-have-confirmed,
+            .i-am-unavailable,
+            .i-am-unconfirmed,
+            .confirmed,
+            .unavailable,
+            .unconfirmed {
+                padding: 4px;
+                border-radius: 4px;
+                font-weight: 600;
+            }
+
+            .i-have-confirmed,
+            .confirmed {
+                background-color: $preference-green;
+            }
+
+            .i-am-unavailable,
+            .unavailable {
+                background-color: $error-red;
+                color: $white;
+            }
+
+            .i-am-unconfirmed,
+            .unconfirmed {
+                background-color: $unconfirmed-grey;
+                color: $brand-evening-black;
+            }
+
+            .i-have-confirmed,
+            .i-am-unavailable,
+            .i-am-unconfirmed {
+                cursor: pointer;
+                transition: all 1s ease;
+                max-width: 150px;
+                margin: 0 auto;
+            }
+
+        }
+    }
+
+    .team-generation {
+        background-color: $brand-evening-black;
+        display: flex;
+        height: 40px;
+        justify-content: space-evenly;
+        position: relative;
+        
+        a,
+        button {
+            background-color: unset;
+            display: inline-block;
+            margin: 0;
+            border: unset;
+            width: 50%;
+            height: 100%;
+            font-size: 10px;
+            line-height: 40px;
+            
+            @include tablet {
+                font-size: 14px;        
+            }            
+        }
+        
+        .ani-holder {
+            display: none;
+            position: absolute;
+            color: $white;
+            top: 35px;
+            left: 40%;
+            
+        }
+    }
+}
+
+// Used on multiple pages... ---------------------------------------------------
+.shirt {
+    display: inline-block;
+    height: 46px;
+    width: 100%;
+    margin: 8px 0;
+    background-image: url('../img/transparent-shirt.png');
+    @extend %contain-picture;
+
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .username {
+            font-family: 'Staatliches', cursive;
+            width: 100%;
+            padding: 0;
+
+            div {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+//  gen_settings.html ----------------------------------------------------------
+.overflow-container {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-gen-pg {
+    .team-gen-settings-pg {
+        min-height: 80vh;
+        box-sizing: border-box;
+        background-color: $white;
+        
+        @include tablet {
+            background-color: transparent;
+        }
+        
+        .member-container {
+            padding-top: 20px;
+        }
+        
+        h2 {
+            padding-left: 20px;
+            text-align: left;
+        }
+        
+        .options-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            
+            p {
+                font-family: 'Staatliches', cursive;
+                font-size: 8px;
+                width: 32px;
+                margin: 0 3px;
+                
+                @include large-tablet {
+                    font-size: 11px;
+                }
+            }
+
+            p:first-of-type {
+                text-align: center;
+            }
+        }
+        
+        .member-container {
+            @include tablet {
+                width: 50%;
+                height: 650px;
+                padding-top: 20px;
+                background-color: $white;
+                position: relative;
+                overflow: scroll;
+            }
+            
+            @include large-tablet {
+                min-height: 802px;
+            }
+            
+            @include laptop {
+                min-height: 722px;
+            }
+            
+            @include desktop {
+                min-height: 802px;
+            }
+        }
+        
+        .btn-row {
+            background-color: $brand-evening-black-offset;
+            
+            @include tablet {
+                margin-top: 0;
+            }
+        }
+        
+        input {
+            width: 68px;
+            border: unset;
+            background-color: transparent;
+            
+            @include tablet {
+                width: 80px;
+            }
+            
+            @include large-tablet {
+                width: 90px;
+            }
+        }
+
+        h3,
+        p {
+            display: inline-block;
+            text-align: left;
+        }
+
+
+        h3,
+        .user-name-and-stats-container {
+            width: 100px;
+            
+            @include tablet {
+                width: 120px;
+            }
+            
+            @include large-tablet {
+                width: 132px;
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+        }
+        
+        .row:nth-of-type(even){
+            background-color: $row-seperator-grey;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .player-container {
+            text-align: left;
+            width: 100px;
+            display: inline-block;
+            
+            @include tablet {
+                width: 120px;
+            }
+            
+            label {
+                font-size: 8px;
+            }
+
+            .user-name-and-stats-container {
+                text-align: left;
+                position: relative;
+
+                .hidden {
+                    display: none;
+                }
+
+                input {
+                    display: inline-block;
+                }
+                
+                .attr-container {
+                    display: inline-block;
+                    position: absolute;
+                    
+                    @include tablet {
+                        right: 0px;
+                    }
+                    
+                    input {
+                        color: $white;
+                        padding: 5px;
+                        background-color: $brand-starry-night-blue;
+                        font-size: 8px;
+                        text-align: center;
+                        font-weight: 600;
+                        display: block;
+                        width: 20px;
+                    }
+
+                    .hidden {
+                        display: none;
+                    }
+
+                    input:first-of-type {
+                        background-color: $brand-irises-green;
+                    }
+
+                }
+            }
+
+
+            .position-pref-container {
+                width: 13%;
+                display: inline-block;
+                text-align: center;
+
+                label,
+                input {
+                    width: 6px;
+                    display: block;
+                    margin: 0 2px 4px 0;
+                }
+            }
+        }
+
+        .avail-container {
+            width: 32px;
+            display: inline-block;
+            
+            i {
+                font-size: 16px;
+            }
+
+            .fa-check-circle {
+                color: $preference-green;
+            }
+
+            .fa-times-circle {
+                color: $error-red;
+            }
+
+            .fa-question-circle {
+                color: $brand-evening-black;
+            }
+        }
+
+        .cant-play,
+        .can-play,
+        .pref-play {
+            height: 4px;
+            width: 4px;
+            font-size: 0;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 1px;
+        }
+
+        .cant-play {
+            background-color: $error-red;
+        }
+
+        .can-play {
+            background-color: $can-play-amber;
+        }
+
+        .pref-play {
+            background-color: $preference-green;
+        }
+    }
+
+    .inner-container {
+        width: 88%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .player-data-row {
+        
+        .gen-options-box {
+            margin: 0 2px;
+            display: inline-block;
+        }
+
+        select,
+        option {
+            font-size: 12px;
+            font-family: 'Staatliches', cursive;
+            width: 32px;
+        }
+
+    }
+
+    .user-playing-positions-section {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 1s;
+        padding-top: 18px;
+        min-height: 100%;
+        
+        @include tablet {
+            width: 50%;
+            min-height: 670px;
+            right: 0;
+        }
+        
+        @include large-tablet {
+            min-height: 822px;
+        }
+        
+        @include laptop {
+            min-height: 742px;
+        }
+        
+        @include desktop {
+            min-height: 822px;
+        }
+            
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            
+            h4 {
+                display: inline-block;
+            }
+            
+            .btn-row {
+                margin: 0;
+                background-color: transparent;
+                height: unset;
+                
+                button {
+                    margin: 0 4px;
+                }
+            }
+        }
+        
+        .half-pitch {
+            .gk-row-team1,
+            .gk-row-team2 {
+
+                .team-1-player,
+                .team-2-player {
+                    background-image: url('../img/transparent-shirt-yellow.png');
+                }
+
+            }
+        }
+
+
+        .pitch-row {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            
+            @include tablet {
+                min-height: 60px;
+            }
+            
+            .team-1-player,
+            .team-2-player {
+                height: 40px;
+                width: 40px;
+                @extend %contain-picture;
+
+
+                p {
+                    font-family: 'Staatliches', cursive;
+                    margin-left: -100%;
+                    margin-right: -100%;
+                    text-align: center;
+                    font-size: 10px;
+                    color: $brand-sunflower-yellow;
+                    position: relative;
+                    top: 40px;
+                    text-shadow: -1px 1px 4px #000000;
+                    
+                    @include tablet {
+                        font-size: 12px;
+                    }
+                    
+                    @include large-tablet {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .team-1-player {
+                background-image: url('../img/transparent-shirt.png');
+            }
+            .team-2-player {
+                background-image: url('../img/transparent-shirt-red.png');
+            }
+        }
+        
+        .team-1-score {
+            top: 0;    
+        }
+        
+        .team-2-score {
+            bottom: 0;
+            right: 0;
+        }
+        
+        .team-1-score,
+        .team-2-score {
+            display: inline-block;
+            position: absolute;
+            width: 76px;
+            color: white;
+            @extend %floating-shadow;
+            font-size: 10px;
+            text-align: center;
+
+            p {
+                padding: 2px 0;
+            }
+
+            p:nth-of-type(2) {
+                padding: 4px 0;
+                background-color: $white;
+                color: $brand-evening-black;
+            }
+        }
+
+        .team-1-score {
+            background-color: $brand-starry-night-blue;
+        }
+
+        .team-2-score {
+            background-color: $shirt-red;
+        }
+    }
+}
+
+// Rate_performance.html -------------------------------------------------------
+.please-wait {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 50;
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    font-weight: 900;
+    
+    background-color: $white;
+    @extend %centralise-inner-container;
+    
+    p {
+        color: $brand-evening-black;    
+    }
+    
+    i {
+        margin-top: 60px;
+        font-size: 15px;
+        color: $black;
+    }
+}
+
+.rate-performance-page {
+    padding: 20px;
+    overflow: hidden;
+    background-color: $brand-irises-green;
+    color: $white;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .match-data {
+        width: 100%;
+        background-color: $brand-evening-black;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 9px;
+
+        p {
+            margin: 4px 0;
+            font-size: 10px;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .user-info-section {
+        position: relative;
+    }
+
+    .container {
+        color: $white;
+    }
+
+    .user-photo-img {
+        height: 88%;
+    }
+
+    .user-photo-img ~ p {
+        width: 117px;
+        background-color: $brand-evening-black;
+        padding: 3px 0;
+        margin: 0 auto;
+        
+        @include large-tablet {
+            width: 200px;
+        }
+    }
+
+    .player,
+    .completed-box {
+        background-color: $brand-irises-green;
+        display: inline-block;
+        width: 100%;
+        height: 59vh;
+        @extend %centralise-inner-container;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        box-sizing: border-box;
+        
+        @include laptop {
+            margin-top: 60px;
+        }
+        
+        .centralise {
+            @extend %centralise-inner-container;
+            height: 100%;
+
+            .container {
+
+                .player-image-container {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 170px;
+                    
+                    @include large-tablet {
+                        height: 300px;
+                    }
+                    
+                    .shirt {
+                        @include large-tablet {
+                            height: 170px;
+                        }
+                        
+                        div {
+                            @include large-tablet {
+                                font-size: 26px;
+                            }    
+                        }
+                    }
+                    
+                    .user-photo-img {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        .final-container {
+            button,
+            p {
+                margin: 40px auto;
+            }
+        }
+    }
+
+    .completed-box {
+        z-index: 2;
+    }
+}
+
+// Checkout.html ---------------------------------------------------------------
+
+.checkout-page {
+    padding: 30px;
+    min-height: 88vh;
+    color: $brand-evening-black;
+    background-color: $white;
+    
+    h2 {
+        margin: 0 0 30px;
+    }
+    
+    p {
+        margin-bottom: 10px;
+    }
+    
+    .payment-form-container {
+        margin-top: 40px;
+        
+        form {
+            width: 82%;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 18px;
+            background-color: #ffce00;
+            @extend %matches-box-shadow;
+            
+        }
+        
+        p {
+            margin: 0;
+            width: 56px;
+            font-size: 0.8em;
+        }
+        
+        p {
+            display: inline-block;
+        }
+        
+        p:nth-of-type(2) {
+            width: 100%;
+        }
+        
+        label {
+            width: 100%;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        input {
+            border-radius: 4px;
+            text-align: center;
+            width: 85%;
+        }
+        
+        .error {
+            color: $error-red;
+            font-weight: 900;
+        }
+    }
+    
+    
+}
+
+// Reset password templates ----------------------------------------------------
+
+.password-reset-pages {
+    padding: 28px;
+    color: $brand-irises-green;
+    @extend %centralise-inner-container;
+    
+    input {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    h1,
+    p,
+    label {
+        display: block;
+        margin-bottom :20px;
+    }
+    
+    p {
+       font-size: 10px;
+        line-height: 16px;
+    }
+    
+    .container {
+        background-color: $row-seperator-grey;
+        padding: 10px;
+    }
+    
+    @include tablet {
+        input,
+        label,
+        p {
+            font-size: 12px;
+        }
+    }
+    
+}
+
+// About_us.html / Contact_us.html----------------------------------------------
+
+.info-pages-sections {
+    
+    .about-us-section {   
+        background-color: $white;
+        padding: 40px;
+        box-sizing: border-box;
+        font-size: .9em;
+        min-height: 47vh;
+        line-height: 16px;
+        
+        p {
+            margin: 12px 0;
+        }
+        
+        p:first-of-type {
+            margin: 40px 0 12px;
+        }
+        
+        p:last-of-type {
+            margin: 60px 0 12px;
+        }
+    }
+
+    .info-img {
+        background-image: url('../img/vslegends.jpg');
+        @extend %cover-image-align-middle;
+        width: 100%;
+        min-height: 45vh;
+    }
+}

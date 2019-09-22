@@ -1,0 +1,84 @@
+.page-container {
+    position: relative;
+    min-height: 80vh;
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.index-page-bg-settings {
+    @extend %centralise-inner-container;
+    width: 100%;
+    height: 400px;
+    
+    h1 {
+        margin: 0 auto;
+    }
+    
+    @include tablet {
+        height: 430px;
+    }
+    
+    @include large-tablet {
+        height: 578px;
+    }
+}
+
+.opening-section-bg {
+    background-image: url('../img/christmascup-green.jpg');
+    @extend %cover-image-align-bottom;
+}
+
+.get-organised-bg {
+    background-image: url('../img/vslegends.jpg');
+    @extend %cover-image-align-bottom;
+    
+    @include laptop {
+        width:70%;
+    }
+    
+}
+
+.be-the-best-bg {
+    background-image: url('../img/vslegends2.jpg');
+    @extend %cover-image-align-bottom;
+    
+    @include laptop {
+        width:70%;
+    }
+}
+
+.password-reset-pages {
+    background-image: url('../img/vslegends2.jpg');
+    @extend %cover-image-align-middle;
+}
+
+.site-container {
+    background-image: url('../img/stadium.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.matches-page {
+    background-color: $white;
+}
+
+.green-bg {
+    background-color: $brand-irises-green !important;
+}
+
+.team-gen-pg {
+    height: 100%;
+    background-image: url('../img/christmascup-green.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 120%;
+    background-size: contain;
+}
+
+
+.tem-gen-height {
+    @include tablet {
+        height: 80vh !important;
+    }
+}

@@ -1,0 +1,137 @@
+.start-off-screen {
+    right: -100%;
+}
+
+.slide-in-from-right {
+    right: 0;
+}
+
+.click-shrink:active {
+    transform: scale(0.9);
+}
+
+.sm-click-shrink:active {
+    transform: scale(0.96);
+}
+
+.click-color-change:active {
+    background-color: $preference-green !important;
+}
+
+.rotate {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-ball {
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(359deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.bounce-ball {
+    position: relative;
+    animation-name: jump;
+    animation-direction: alternate;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+    @include large-tablet {
+        animation-name: bigger-jump;
+    }
+}
+
+@keyframes jump {
+    from {
+        top: -10px;
+
+    }
+    
+    to {
+        top: -40px;
+    }
+}
+
+@keyframes bigger-jump {
+    from {
+            top: 20px;
+
+        }
+    
+        to {
+            top: -80px;
+        }
+}
+
+.grow {
+    transition: all 1s;
+}
+
+.grow:hover,
+.grow-match:hover {
+    transform: scale(1.1);
+}
+
+.hover-effect-yellow,
+.hover-effect-gold,
+.hover-effect-blue,
+.hover-effect-amber,
+.hover-effect-green,
+.hover-effect-yellow-i,
+.hover-effect-red {
+    transition: all .5s;
+}
+
+.hover-effect-yellow:hover {
+    background-color: $brand-sunflower-yellow !important;
+}
+
+.hover-effect-yellow-i:hover {
+    color: $brand-sunflower-yellow;
+}
+
+.hover-effect-gold:hover {
+    background-color: $brand-evening-black-offset !important;
+    color: $white;
+}
+
+.hover-effect-red:hover {
+    background-color: $hover-red;
+}
+
+.hover-effect-amber:hover {
+    background-color: $hover-amber !important;
+}
+
+.hover-effect-green:hover {
+    background-color: $hover-green !important;
+}
+
+.hover-effect-brand-green:hover {
+    background-color: $brand-irises-green !important;
+}
+
+.hover-effect-blue:hover {
+    background-color: $hover-blue;
+}
